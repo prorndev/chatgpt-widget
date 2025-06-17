@@ -3,6 +3,7 @@ Description=ChatGPT Desktop Widget
 After=graphical-session.target
 
 [Service]
+WorkingDirectory=YOUR_PROJECT_PATH
 ExecStart=YOUR_PROJECT_PATH/node_modules/electron/dist/electron .
 Restart=on-failure
 
