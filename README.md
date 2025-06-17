@@ -47,16 +47,17 @@ A simple, lightweight, and always-on-top desktop widget that embeds the ChatGPT 
 
 ## Ubuntu Service Setup (Optional)
 
-To run the widget automatically on startup as a systemd service, simply run the provided installation script.
+To run the widget automatically when you log in, simply run the installation script. **Do not use sudo.**
 
 ```bash
-sudo ./install-service.sh
+./install-service.sh
 ```
 
-This will automatically configure and install the service for the current user.
+This will install and enable a user-level service.
 
 ### Service Management Commands
 
--   **Check the status:** `sudo systemctl status chatgpt-widget.service`
--   **Stop the service:** `sudo systemctl stop chatgpt-widget.service`
--   **Restart the service:** `sudo systemctl restart chatgpt-widget.service` 
+-   **Check the status:** `systemctl --user status chatgpt-widget.service`
+-   **Stop the service:** `systemctl --user stop chatgpt-widget.service`
+-   **Restart the service:** `systemctl --user restart chatgpt-widget.service`
+-   **View logs:** `journalctl --user -u chatgpt-widget.service` 
