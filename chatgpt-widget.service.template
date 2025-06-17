@@ -4,9 +4,8 @@ After=network.target
 
 [Service]
 User=YOUR_USERNAME
-Group=YOUR_USERNAME
 WorkingDirectory=YOUR_PROJECT_PATH
-ExecStart=YOUR_PROJECT_PATH/node_modules/.bin/electron .
+ExecStart=YOUR_PROJECT_PATH/node_modules/electron/dist/electron .
 Restart=on-failure
 Environment=DISPLAY=:0
 
