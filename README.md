@@ -43,30 +43,17 @@ A simple, lightweight, and always-on-top desktop widget that embeds the ChatGPT 
     npm start
     ```
 -   **Open/Close the widget:** Press `Ctrl+Space`.
--   **Send a message:** Type your message and press `Super+Enter`.
+-   **Send a message:** Type your message and press `Super+Enter` (or `Cmd+Enter` on macOS).
 
 ## Ubuntu Service Setup (Optional)
 
-To run the widget automatically on startup as a systemd service, follow these steps.
+To run the widget automatically on startup as a systemd service, simply run the provided installation script.
 
-1.  **Edit the service file:**
-    Open the `chatgpt-widget.service` file and replace `YOUR_USERNAME` with your actual Ubuntu username and `YOUR_PROJECT_PATH` with the absolute path to the `chatgpt-widget` project directory.
+```bash
+sudo ./install-service.sh
+```
 
-2.  **Install the service:**
-    ```bash
-    sudo cp chatgpt-widget.service /etc/systemd/system/chatgpt-widget.service
-    ```
-
-3.  **Reload systemd and enable the service:**
-    ```bash
-    sudo systemctl daemon-reload
-    sudo systemctl enable chatgpt-widget.service
-    ```
-
-4.  **Start the service:**
-    ```bash
-    sudo systemctl start chatgpt-widget.service
-    ```
+This will automatically configure and install the service for the current user.
 
 ### Service Management Commands
 
