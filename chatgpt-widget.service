@@ -1,0 +1,14 @@
+[Unit]
+Description=ChatGPT Desktop Widget
+After=network.target
+
+[Service]
+User=YOUR_USERNAME
+Group=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/YOUR_PROJECT_PATH/chatgpt-widget
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target 
