@@ -1,6 +1,5 @@
 [Unit]
 Description=ChatGPT Desktop Widget
-After=graphical-session.target
 
 [Service]
 WorkingDirectory=YOUR_PROJECT_PATH
